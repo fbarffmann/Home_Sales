@@ -1,37 +1,38 @@
 # Home Sales Analysis with PySpark
 
-Built a scalable analysis pipeline using PySpark to evaluate trends in home sales data. Explored pricing patterns based on year built, number of bedrooms, bathrooms, square footage, and view ratings. Used SparkSQL for efficient querying and partitioning of large datasets.
+Built a scalable data analysis pipeline using PySpark to explore pricing trends in home sales across King County, Washington. Leveraged SparkSQL for querying and partitioned the dataset to optimize performance on large-scale data.
 
 ## Tools & Technologies Used
 
 - Python
 - PySpark
 - SparkSQL
-- AWS S3 Data Source
 - Parquet File Partitioning
+- AWS S3 (Data Source)
 - Jupyter Notebooks
 
 ## File Structure
 
 ```text
 .
-├── Home_Sales.ipynb                # Full analysis notebook
-├── home_sales_partitioned/         # Partitioned parquet dataset by year built
-└── lending_data.csv                # Original dataset
+├── Home_Sales.ipynb                     # PySpark analysis notebook
+├── home_sales_partitioned/              # Partitioned parquet files by year built
+└── Resources/
+    └── home_sales.csv                   # Raw home sales dataset
 ```
 
 ## Skills Demonstrated
 
 - Distributed data processing with PySpark
 - SQL querying within Spark
-- Performance optimization using caching & partitioning
-- Data transformation and aggregation techniques
-- Efficient handling of large datasets
+- Data partitioning and caching for optimized performance
+- Handling large real-world datasets
+- Identifying pricing trends from structured data
 
 ## Key Findings
 
-- Analyzed pricing trends for over 25,000 home sales.
-- 4-bedroom homes sold for an average of $300,263 to $306,910 per year.
-- Homes built with 3 beds, 3 baths, 2 floors, and 2000+ sqft averaged $600,000+ after 2015.
-- Properties with a "view" rating of 4 or higher had an average sale price above $350,000.
-- Optimized Spark queries reduced processing time by over 70% when using cache vs. uncached data.
+- Analyzed over 25,000 home sales in King County, WA.
+- 4-bedroom homes sold for an average price between $300,263 and $306,910 per year.
+- Homes with 3 beds, 3 baths, 2 floors, and 2,000+ sqft averaged over $600,000 after 2015.
+- Homes with a view rating of 4 or higher had an average sale price exceeding $350,000.
+- Partitioning data by year built improved query performance by over 70%.
